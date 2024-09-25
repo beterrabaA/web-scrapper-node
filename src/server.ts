@@ -1,10 +1,14 @@
 import { createServer } from "http";
-import { sendResponse } from "./utils/index.js";
+import { crawlData, sendResponse } from "./utils/index.js";
 
-const hostname = '127.0.0.1';
+const PORT = 3000;
 
-const server = createServer((request, response) => {
-    sendResponse(response, 200, { message: "You got it!" })
+const server = createServer((_request, response) => {
+    crawlData().then(data => {
+        sendResponse(response, 200, data)
+    }).catch(err => {
+        sendResponse(response, 500, { message: "Something went wrong." })
+    })
 })
 
-server.listen(3000, () => console.log(`Server running at port 3000`));
+server.listen(PORT, () => console.log(`Server running at port ${PORT}`));
