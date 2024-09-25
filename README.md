@@ -27,7 +27,9 @@ ou sem instalação
 ```
 A aplicação estará disponível nesse endereço: [localhost:3000](http://localhost:3000/)
 
-## 
+## Features
 
-Insira um gif ou um link de alguma demonstração
+- Typescript
+- Cheerio
+- Node
 
