@@ -1,7 +1,7 @@
 
 # Web Scraper
 
-Projeto onde coleta dados de notebook de um site fictício de ecommerce
+Projeto onde coleta dados de notebook de um site fictício de ecommerce e ordena por preço
 
 
 ## Instalação
